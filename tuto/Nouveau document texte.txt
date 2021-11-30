@@ -1,0 +1,14 @@
+- Après l'installation du projet Laravel, on va installer Laravel Livewire (voir la doc sur le site:
+https://laravel-livewire.com/docs/2.x/quickstart).
+- Installation: composer require livewire/livewire
+- On doit ensuite charger les fichiers de style et les fichier de Script on ajoutant ces deux instructions dans le
+fichier ressources/views/welcome.blade.php:
+	- @livewireStyles
+	- @livewireScripts
+
+- On va créer un composant Livewire: la commande livewire:make permet de créer un composant Livewire
+	- On va créer un composant light: php artisan livewire:make light || light c'est le nom de notre composant
+	-> ça nous a généré une classe et un fichier dans views:
+	   CLASS: app/Http/Livewire//Light.php
+	   VIEW:  C:\laragon\www\light-app\resources\views/livewire/light.blade.php
+- On va devoir inclure ce composant au niveau de notre page: @livewire('nomDuComposant') dans notre page welcome
